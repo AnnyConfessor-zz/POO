@@ -1,42 +1,41 @@
-from abc import ABC, abstractmethod
+    from abc import ABC, abstractmethod
 
-class animal(ABC):
-    def __init__(self, nasce, morre):
-        self.__nasce = nasce
-        self.__morre = morre
-    
-    @abstractmethod
-    def nasce(self):
-        print('Animal nasce')
+    class animal(ABC):
+        def __init__(self, nasce, morre):
+            self.__nasce = nasce
+            self.__morre = morre
+        
+        @abstractmethod
+        def nasce(self): #é um método abstrato, pois alguns nascem de modo diferente
+            print('Animal nasce')
 
-    def morre(self):
-        print('Animal morreu')
+        def morre(self): #é um método concreto
+            print('Animal morreu')
 
-    
-class mamifero(animal):
+        def emite_som():
+            print('Emite som')
+        
+    class mamifero(animal): #super classe
+        def amamenta():
+            print('Mamífero amamenta')
 
-    def amamenta():
-        print('Mamífero amamenta')
+    class gato(mamifero):
+        print('Gato é um mamífero')
 
-class gato(mamifero):
-    
+    class cachorro(mamifero):
+        print('Cachorro é um mamífero')    
+        
+    class onitorrino(mamifero):
+        def nasce():
+            print('Onitorrino nasce de um ovo')
+        
+    class ave(animal):
+        def nasce():
+            print('Ave nasce de ovo')
 
-class cachorro(mamifero):
-    
-    
-class onitorrinco(mamifero):
-    def nasce():
-        print('Nasce de modo diferente que na super classe')
-     
-class ave():
+    class pinguim(ave):
+        print('É um pinguim')
 
-    def nasce():
-        print('Nasce de modo diferente que nas super classe')
+    class aguia(ave):
+        print('é uma Água')
 
-
-class pinguim(ave):
-   def voar():
-       print('É um método diferente que não tem nos outros')
-
-
-class aguia(ave):
