@@ -12,8 +12,9 @@
         def morre(self): #é um método concreto
             print('Animal morreu')
 
-        def emite_som():
-            print('Emite som')
+        @abstractmethod
+        def emite_som(self):
+            pass
         
     class mamifero(animal): #super classe
         def amamenta():
@@ -22,13 +23,22 @@
     class gato(mamifero):
         print('Gato é um mamífero')
 
+        def emite_som():
+            print('Emite som')
+
     class cachorro(mamifero):
-        print('Cachorro é um mamífero')    
+        print('Cachorro é um mamífero')
+
+        def emite_som():
+            print('Emite som')    
         
     class onitorrino(mamifero):
         def nasce():
             print('Onitorrino nasce de um ovo')
         
+        def emite_som():
+            print('Emite som')
+            
     class ave(animal):
         def nasce():
             print('Ave nasce de ovo')
@@ -36,6 +46,11 @@
     class pinguim(ave):
         print('É um pinguim')
 
+        def emite_som():
+            print('Emite som')
+
     class aguia(ave):
         print('é uma Água')
 
+        def emite_som():
+            print('Emite som')
