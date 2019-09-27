@@ -7,7 +7,7 @@
         
         @abstractmethod
         def nasce(self): #é um método abstrato, pois alguns nascem de modo diferente
-            print('Animal nasce')
+            print('Animal nasceu')
 
         def morre(self): #é um método concreto
             print('Animal morreu')
@@ -17,40 +17,41 @@
             pass
         
     class mamifero(animal): #super classe
-        def amamenta():
+        def amamenta(self):
             print('Mamífero amamenta')
 
     class gato(mamifero):
-        print('Gato é um mamífero')
 
-        def emite_som():
-            print('Emite som')
+        def emite_som(self):
+            print('Miau')
 
     class cachorro(mamifero):
-        print('Cachorro é um mamífero')
-
-        def emite_som():
-            print('Emite som')    
+        def emite_som(self):
+            print('Auau')    
         
     class onitorrino(mamifero):
-        def nasce():
+        def nasce(self):
             print('Onitorrino nasce de um ovo')
         
-        def emite_som():
-            print('Emite som')
+        def emite_som(self):
+            print('Som de onitorrino')
             
     class ave(animal):
-        def nasce():
+        def nasce(self):
             print('Ave nasce de ovo')
 
-    class pinguim(ave):
-        print('É um pinguim')
+        def voa(self):
+            print('A ave voa')
 
-        def emite_som():
-            print('Emite som')
+    class pinguim(ave):
+
+        def emite_som(self):
+            print('Som de pinguim')
+        
+        def voa(self):
+            print('Pinguim não voa')
 
     class aguia(ave):
-        print('é uma Água')
 
-        def emite_som():
-            print('Emite som')
+        def emite_som(self):
+            print('Som de ave')

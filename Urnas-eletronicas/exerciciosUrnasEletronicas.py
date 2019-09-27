@@ -22,8 +22,6 @@ class candidatos:
     def __init__(self, id):
         self.__id = id
 
-
-
 def main():
     voto1 = votoPessoa('Carlos - Chapa 1')
     
