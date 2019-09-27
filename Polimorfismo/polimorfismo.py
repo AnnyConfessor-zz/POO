@@ -1,14 +1,14 @@
 class Pessoa:
-listaPessoas = []
+    def __init__(self,nome,idade):
+        self.nome = nome
+        self.idade = idade
 
-    def listaPessoas(self,listaPessoas):
-        self.__listaPessoas = listaPessoas
+class listaPessoas(Pessoa):
+    def listaPessoas(self):
+        self.listaPessoas = listaPessoas
         cont = listaPessoas.idade
-
         for i in listaPessoas.idade:
             somaIdades = somaIdades + listaPessoas.idade
-            
-
 
 class Aluno:
 
