@@ -2,10 +2,10 @@ class library:
     def __init__(self, id):
         self.id = identifier
 
-    def book(self):
+class book(library):
         print('Books')
 
-    def periodic(self):
+class periodic(library):
         print('Periodics')
 
     def quantLibrary(self, loands):
@@ -13,20 +13,17 @@ class library:
         for i in loands:
             print('Loand done')
 
-    @bstractmethod #isso é só para a superclasse e as subclasses
-    def loand(self, identifier):
-        #may I put an identifier here?
-        lend = []
-        for i in lend:
-            maximum = identifier
-            print('Load done')
-
 class user:
-    @abstractmethod
     def __init__(self, adress, cpf, dataNas):
         self.__adress = adress
         self.__cpf = cpf
         self.__dataNas = dataNas
+
+    @abstractmethod
+    def quantUser(self):
+        if (l>=2):
+            print('Loand faild')
+
 
 class studant(user):
     def __init__(self, curse, numRegister, ingresso):
@@ -34,23 +31,38 @@ class studant(user):
         self.__numRegister = numRegister
         self.ingresso = ingresso
 
-    def loand(self, maxStudant):
-        #Need fix this
-        self.maxStudant = maximum
-        if lend > 3:
-            print('A studant can take until 4 books or periodics')
+    def quantUser(self, booksStudant):
+         self.booksStudant = [3]
+            if (l>4):
+                print('Loand faild')
+            else:
+                loands = '' #nome do livro
+                for i in booksStudant:
+                    booksStudant = i  
+                print('Loand done')
             
 class teacher(user):
     def __init__(self,lotacao):
         self.lotacao = lotacao
 
-    def loand(self, maxTeacher):
-        #Need fix this
-        self.max = maximum
-        if lend > 2:
-            print('A teacher can take until 2 books or periodics')
+        def quantUser(self, booksTeacher):
+            self.booksTeacher = [1]
+            if (l>2):
+                print('Loand faild')
+            else:
+                loands = '' #nome do livro
+                for i in booksTeacher:
+                    booksTeacher = i  
+                print('Loand done')
 
 class special(user):
-    #Need fix this
-    def loand(self, maxSpecial):
-        self.max = maximum
+
+    def quantUser(self, booksOthers):
+        self.booksOthers = [5]
+            if (l>6):
+                print('Loand faild')
+            else:
+                loands = '' #nome do livro
+                for i in booksOthers:
+                    booksOthers = i  
+                print('Loand done')
