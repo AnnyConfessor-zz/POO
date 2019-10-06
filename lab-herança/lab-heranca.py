@@ -8,7 +8,17 @@ class library:
     def periodic(self):
         print('Periodics')
 
-    @bstractmethod
+    def quantLibrary(self, loands):
+        self.loands = [2] #total quantity in library for other users
+        print('How much loands are you?')
+        if (1<=l<=2): # l is the loands quantity
+            for i in loands:
+                loands = "Book's name: " #include other vector here
+                l += 1 
+        
+
+
+    @bstractmethod #isso é só para a superclasse e as subclasses
     def loand(self, identifier):
         #may I put an identifier here?
         lend = []
