@@ -9,14 +9,9 @@ class library:
         print('Periodics')
 
     def quantLibrary(self, loands):
-        self.loands = [2] #total quantity in library for other users
-        print('How much loands are you?')
-        if (1<=l<=2): # l is the loands quantity
-            for i in loands:
-                loands = "Book's name: " #include other vector here
-                l += 1 
-        
-
+        self.loands = [1000] #total quantity in library
+        for i in loands:
+            print('Loand done')
 
     @bstractmethod #isso é só para a superclasse e as subclasses
     def loand(self, identifier):
@@ -26,14 +21,14 @@ class library:
             maximum = identifier
             print('Load done')
 
-class usuario:
+class user:
     @abstractmethod
     def __init__(self, adress, cpf, dataNas):
         self.__adress = adress
         self.__cpf = cpf
         self.__dataNas = dataNas
 
-class studant:
+class studant(user):
     def __init__(self, curse, numRegister, ingresso):
         self.curse = curse
         self.__numRegister = numRegister
@@ -45,7 +40,7 @@ class studant:
         if lend > 3:
             print('A studant can take until 4 books or periodics')
             
-class teacher:
+class teacher(user):
     def __init__(self,lotacao):
         self.lotacao = lotacao
 
@@ -55,7 +50,7 @@ class teacher:
         if lend > 2:
             print('A teacher can take until 2 books or periodics')
 
-class special:
+class special(user):
     #Need fix this
     def loand(self, maxSpecial):
         self.max = maximum
