@@ -1,12 +1,29 @@
+class dicionary(self, ...):
+    #classe mais fácil para poder comparar os livros que o usuário tem e os que tem na library
+
 class library:
     def __init__(self, id):
         self.id = identifier
 
-    #
+    def book(self, idBooks):
+        print('Books')
+        #cada livro precisa ter um id
+
+    def periodics(self, idPeriodics):
+        print('Periodics')
+        #cada periódico precisa ter um id
+    
     def quantLibrary(self, loands):
-        self.loands = [1000] #total quantity in library
+        self.loands = [1000] #total quantity in library 
         for i in loands:
             print('Loand done')
+
+    def register(self):
+
+    #propety aqui
+    #tem que fazer o get para os livros e para a library
+    #tem que fazer as cópias dos livros que pertencem à biblioteca
+
 
 class user:
     def __init__(self, adress, cpf, dataNas):
@@ -35,6 +52,9 @@ class studant(user):
                 for i in booksStudant:
                     booksStudant = i  
                 print('Loand done')
+
+    def livrosEmprestados(self, idBookUser):
+        print('Aqui é o id do livro que a pessoa tem para comparar com o livro que tem na biblioteca')
             
 class teacher(user):
     def __init__(self,lotacao):
@@ -60,3 +80,4 @@ class special(user):
                 for i in booksOthers:
                     booksOthers = i  
                 print('Loand done')
+
