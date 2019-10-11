@@ -8,6 +8,7 @@ class book(library):
 class periodic(library):
         print('Periodics')
 
+    #
     def quantLibrary(self, loands):
         self.loands = [1000] #total quantity in library
         for i in loands:
@@ -56,7 +57,6 @@ class teacher(user):
                 print('Loand done')
 
 class special(user):
-
     def quantUser(self, booksOthers):
         self.booksOthers = [5]
             if (l>6):
