@@ -2,12 +2,6 @@ class library:
     def __init__(self, id):
         self.id = identifier
 
-class book(library):
-        print('Books')
-
-class periodic(library):
-        print('Periodics')
-
     #
     def quantLibrary(self, loands):
         self.loands = [1000] #total quantity in library
@@ -22,7 +16,7 @@ class user:
 
     @abstractmethod
     def quantUser(self):
-        if (l>=2):
+        if (loands>=2):
             print('Loand faild')
 
 
@@ -34,7 +28,7 @@ class studant(user):
 
     def quantUser(self, booksStudant):
          self.booksStudant = [3]
-            if (l>4):
+            if (loands>4):
                 print('Loand faild')
             else:
                 loands = '' #nome do livro
@@ -48,7 +42,7 @@ class teacher(user):
 
         def quantUser(self, booksTeacher):
             self.booksTeacher = [1]
-            if (l>2):
+            if (loands>2):
                 print('Loand faild')
             else:
                 loands = '' #nome do livro
@@ -59,7 +53,7 @@ class teacher(user):
 class special(user):
     def quantUser(self, booksOthers):
         self.booksOthers = [5]
-            if (l>6):
+            if (loands>6):
                 print('Loand faild')
             else:
                 loands = '' #nome do livro
