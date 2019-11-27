@@ -1,0 +1,5 @@
+Complete a implementação com as funcionalidades a seguir:
+ - Um botão para atualizar o email das pessoas. Utilize, por exemplo,  o atributo self.ecpf['state'] = 'disabled' para evitar que o usuário modifique o CPF/nome (esses atributos não tem métodos SET na classe do modelos). A atualização das pessoas deve ser feita depois de "buscar" a pessoa (botão Listar) e selecionar uma delas. 
+
+- Um botão para remover uma pessoa do banco de dados (depois de busca-la com a opção "Listar")
+
